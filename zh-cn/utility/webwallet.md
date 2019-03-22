@@ -1,4 +1,4 @@
-#web-wallet
+# web-wallet
 
 ## 介绍
 
@@ -33,5 +33,4 @@ web-wallet 全部代码托管在 github 上，访问 [cos-web-toolkit](https://g
 也可以通过 pm2 运行。默认的 pm2 配置是 `pm2.config.js`，请注意 `error_file` 和 `out_file` 的地址可能需要修改。
 
 执行 `npm run build` 之后通过 `INITMINER=yourPrivKey pm2 start pm2.config.js` 运行 web-wallet，`INITMINER` 请改为自己的值。
-
 
