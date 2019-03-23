@@ -8,6 +8,9 @@
 * generate keystore file
 * transfer
 * post
+* faucet (only supported on testnet)
+
+Faucet drips One COS each time to make developers be able to interact with testnet.
 
 Visit the web-wallet for testnet in <https://testwallet.contentos.io/>.
 
@@ -24,14 +27,16 @@ Running `npm install` to install dependencies.
 ### dev environment
 `web-wallet` composed by frontend and backend. You can run frontend by `npm run dev` and `npm run debug_server` to run backend.
 
-Read detail from `package.json`, `debug_server` need some environment variables especially `INITMINER`. 
-Which refers to the private key belongs to initminer in contentos-chain. If you had modified it in `contentos-go`, you should do it in `package.json` as well.
+Read detail from `package.json`, `debug_server` need some environment variables especially `CREATOR`. 
+Which refers to the private key belongs to an account called **accountcreator** in contentos-chain. 
+The accountcreator is a special account which created by initminer and to create other accounts by web request.
+Different from initminer, the accountcreator **would not** be created automatically after the chain's running. You should create it by yourself for local environment. 
 
 Using the default private key is dangerous. Do modify it before you release your own contentos-chain.
 
 ### under pm2
 The default configuration file is `pm2.config.js`. Watch out the `error_file` and `out_file` should be modified.
 
-After `npm run build`, you can run web-wallet by `INITMINER=yourPrivKey pm2 start pm2.config.js --env development`. 
-The `INITMINER` should be modified to your own private key. 
+After `npm run build`, you can run web-wallet by `CREATOR=yourPrivKey pm2 start pm2.config.js --env development`. 
+The `CREATOR` should be modified to your own private key. 
 
