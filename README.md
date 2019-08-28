@@ -1,27 +1,50 @@
-# CONTENTOS Document
+<h2 align="center">
+    <a href="https://contentos.io">
+    <img alt="contentos" src="./_media/bigname.png">
+    </a>
+</h2>
 
-> Guides, Usages, Interactive APIs and so on.
+<p align="center">
+  <a href="https://travis-ci.org/coschain/contentos-go"><img alt="Travis Status" src="https://travis-ci.com/coschain/contentos-go.svg?branch=master"></a>
+</p>
 
-This document includes "all you should know" about [contentos](https://github.com/coschain/contentos-go). We hope you will find it useful. If you thought somewhere is hard to understand or has a mistake, 
-you can [issue](https://github.com/coschain/cos-document/issues) it to us know. 
+<p align="center">
+    Contentos is a free, open-source blockchain software protocol.
+</p>
 
-Contents:
+## INTRODUCTION
 
-* Chain
+- [Overview](/zh-cn/overview)
+- [What is cotentos](/zh-cn/about)
+- [testnet](/zh-cn/testnet)
 
-    * [local](/en-us/chain/local.md)
-    * [testnet](/en-us/chain/testnet.md)
-    
-* Contract
+## ESSENTIALS
 
-    * [summary](/en-us/contract/intro.md)
-    
-* Utilities
+- [Getting Started](/zh-cn/tutorial/)
+- [Plugins](/zh-cn/plugin/)
+- [GRPC APIs](/zh-cn/grpc/)
+- [Commands(wallet cli)](/zh-cn/wallet/)
 
-    * [explorer](/en-us/utility/explorer.md)
-    * [js-sdk](/en-us/utility/jssdk.md)
-    * [web-wallet](/en-us/utility/webwallet.md)
-    
-The document is written under [docsify](https://github.com/docsifyjs/docsify/). 
-You can install it to read the document with a better experiment. 
+## ADVANCED GUIDE
 
+- [Sabft](/zh-cn/sabft)
+
+## LIBRARIES & TOOLS
+
+- [block explorer](https://github.com/coschain/block-explorer)
+- [web wallet](https://github.com/coschain/cos-web-toolkit)
+- [contract web compiler](https://github.com/coschain/WebAssemblyStudio)
+- [android sdk](https://github.com/coschain/cos-android-sdk)
+- [js sdk](https://github.com/coschain/cos-sdk-grpc-js)
+
+## RESOURCES
+
+- [Frequence Questions](/zh-cn/questions/)
+- [Whitepaper](/zh-cn/whitepaper/)
+- [Community](/zh-cn/community/)
+- [Contributors](/zh-cn/contributors)
+
+
+## License
+
+[MIT](LICENSE)

@@ -1,24 +1,50 @@
-# CONTENTOS 文档
+<h2 align="center">
+    <a href="https://contentos.io">
+    <img alt="contentos" src="./_media/bigname.png">
+    </a>
+</h2>
 
-> Guides, Usages, Interactive APIs and so on.
+<p align="center">
+  <a href="https://travis-ci.org/coschain/contentos-go"><img alt="Travis Status" src="https://travis-ci.com/coschain/contentos-go.svg?branch=master"></a>
+</p>
 
-文档包括了目前 [contentos](https://github.com/coschain/contentos-go) 涉及的主链和相关工具链的安装，配置等内容。希望能帮助您了解 contentos。如果有任何问题，请提交 [issue](https://github.com/coschain/cos-document/issues) 给我们。
+<p align="center">
+    Contentos 是免费的，开源的，内容区块链协议。
+</p>
 
-主要内容:
+## 介绍
 
-* 主链
+- [概述](/zh-cn/overview)
+- [Contentos 是什么](/zh-cn/about)
+- [测试链](/zh-cn/testnet)
 
-    * [本地搭建](/zh-cn/chain/local.md)
-    * [测试网](/zh-cn/chain/testnet.md)
-    
-* 智能合约
+## 主要内容
 
-    * [进度](/zh-cn/contract/intro.md)
-    
-* 相关工具
+- [教程](/zh-cn/tutorial/)
+- [插件](/zh-cn/plugin/)
+- [GRPC APIs](/zh-cn/grpc/)
+- [wallet 命令行](/zh-cn/wallet/)
 
-    * [explorer](/zh-cn/utility/explorer.md)
-    * [js-sdk](/zh-cn/utility/jssdk.md)
-    * [web-wallet](/zh-cn/utility/webwallet.md)
-    
-文档使用了 [docsify](https://github.com/docsifyjs/docsify/) 进行编写，你可以安装它获得更好的阅读体验。
+## 拓展内容
+
+- [Sabft](/zh-cn/sabft)
+
+## 库&&工具
+
+- [block explorer](https://github.com/coschain/block-explorer)
+- [web wallet](https://github.com/coschain/cos-web-toolkit)
+- [contract web compiler](https://github.com/coschain/WebAssemblyStudio)
+- [android sdk](https://github.com/coschain/cos-android-sdk)
+- [js sdk](https://github.com/coschain/cos-sdk-grpc-js)
+
+## 资源
+
+- [常见问题](/zh-cn/questions/)
+- [白皮书](/zh-cn/whitepaper/)
+- [社区](/zh-cn/community/)
+- [贡献者](/zh-cn/contributors)
+
+
+## 许可证
+
+[MIT](LICENSE)
