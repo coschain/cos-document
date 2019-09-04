@@ -22,8 +22,7 @@
 
 - [教程](/zh-cn/tutorial/)
 - [插件](/zh-cn/plugin/)
-- [GRPC APIs](/zh-cn/grpc/)
-- [wallet 命令行](/zh-cn/wallet/)
+- [GRPC APIs](/zh-cn/apis.md)
 
 ## 拓展内容
 
