@@ -343,6 +343,99 @@ func main() {
 1. 这个接口不仅会返回对应的 post 信息，并且会返回这个 post 的 reply 与 vote 信息
 2. 同样，返回的 reply 和 vote 最大个数也限制为 30
 
+### /grpcpb.ApiService/GetBlockProducerByName
+
+查询 block producer 的详细信息
+
+#### 请求
+
+**GetBlockProducerByNameRequest**
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| bp_name | prototype.account_name |  |  |
+
+#### 响应
+
+**BlockProducerResponse**
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| owner | prototype.account_name |  |  |
+| created_time | prototype.time_point_sec |  |  |
+| url | string |  |  |
+| bp_vest | prototype.bp_vest_id |  |  |
+| signing_key | prototype.public_key_type |  |  |
+| proposed_stamina_free | uint64 |  |  |
+| tps_expected | uint64 |  |  |
+| account_create_fee | prototype.coin |  |  |
+| top_n_acquire_free_token | uint32 |  |  |
+| ticket_flush_interval | uint64 |  |  |
+| per_ticket_price | prototype.coin |  |  |
+| per_ticket_weight | uint64 |  |  |
+| voter_count | uint64 |  |  |
+| gen_block_count | uint64 |  |  |
+
+
+#### 代码示例
+
+```go
+func main() {
+	conn, _ := grpc.Dial("localhost:8888",  grpc.WithInsecure())
+	defer conn.Close()
+	client := grpcpb.NewApiServiceClient(conn)
+	req := &grpcpb.GetBlockProducerByNameRequest{BpName: &prototype.AccountName{Value: "initminer1"}}
+	resp , _ := client.GetBlockProducerByName(context.Background(), req)
+	fmt.Println(resp)
+}
+```
+
+### /grpcpb.ApiService/GetBlockProducerListByVoteCount
+
+查询按投票数倒序排列的 block producer 列表
+
+#### 请求
+
+**GetBlockProducerListByVoteCountRequest**
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| start | prototype.vest |  |  |
+| end | prototype.vest |  |  |
+| last_block_producer | BlockProducerResponse |  |  |
+| limit | uint32 |  |  |
+
+#### 响应
+
+**GetBlockProducerListResponse**
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| block_producer_list | BlockProducerResponse | repeated |  |
+
+#### 代码示例
+
+```go
+func main() {
+	conn, _ := grpc.Dial("localhost:8888",  grpc.WithInsecure())
+	defer conn.Close()
+	client := grpcpb.NewApiServiceClient(conn)
+	req := &grpcpb.GetBlockProducerListByVoteCountRequest{Limit: 10}
+	resp , _ := client.GetBlockProducerListByVoteCount(context.Background(), req)
+	fmt.Println(resp)
+	// paginate
+	bp := resp.BlockProducerList[0]
+	start := bp.BpVest.VoteVest
+	req = &grpcpb.GetBlockProducerListByVoteCountRequest{Start: start, LastBlockProducer: bp, Limit: 10}
+	resp , _ = client.GetBlockProducerListByVoteCount(context.Background(), req)
+	fmt.Println(resp)
+}
+```
+
+#### 说明
+
+1. 接口限制为 30
+
 ### /grpcpb.ApiService/BroadcastTrx
 
 广播交易给 block producer 处理，唯一的写入接口
