@@ -1,15 +1,7 @@
-* Chain
+* 主要内容
 
-    * [local](/en-us/chain/local.md)
-    * [testnet](/en-us/chain/testnet.md)
-    
-* Contract
+    * [教程](/en-us/tutorial/)
+    * [插件](/en-us/plugins.md)
+    * [链 Apis](/en-us/apis.md)
 
-    * [summary](/en-us/contract/intro.md)
-    
-* Utilities
-
-    * [explorer](/en-us/utility/explorer.md)
-    * [js-sdk](/en-us/utility/jssdk.md)
-    * [web-wallet](/en-us/utility/webwallet.md)
-
+* [库 && 工具](/en-us/tools.md)

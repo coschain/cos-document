@@ -1,6 +1,6 @@
 <h2 align="center">
     <a href="https://contentos.io">
-    <img alt="contentos" src="./_media/bigname.png">
+    <img alt="contentos" src="../_media/bigname.png">
     </a>
 </h2>
 
@@ -17,9 +17,9 @@
 
 ## 拓展内容
 
-- [Sabft](/zh-cn/sabft)
+- [Sabft](/zh-cn/sabft.md)
 
-## 库&&工具
+## 库 && 工具
 
 ### 源代码
 
@@ -28,6 +28,7 @@
 - [contract web compiler](https://github.com/coschain/WebAssemblyStudio)
 - [contract compiler](https://github.com/coschain/wasm-compiler)
 - [android sdk](https://github.com/coschain/cos-android-sdk)
+- [iOS sdk](https://github.com/coschain/cos-ios-sdk)
 - [js sdk](https://github.com/coschain/cos-sdk-grpc-js)
 
 ### 工具网站
@@ -39,8 +40,8 @@
 ## 资源
 
 - [常见问题](/zh-cn/questions/)
-- [白皮书](/zh-cn/whitepaper/)
-- [社区](/zh-cn/community/)
+- [白皮书](https://www.contentos.io/subject/home/pdfs/white_paper_zh.pdf)
+- [社区](https://forum.contentos.io)
 - [贡献者](/zh-cn/contributors)
 
 
