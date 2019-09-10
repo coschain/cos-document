@@ -21,7 +21,7 @@
 ## ESSENTIALS
 
 - [Getting Started](/zh-cn/tutorial/)
-- [Plugins](/zh-cn/plugin/)
+- [Plugins](/zh-cn/plugins/)
 - [GRPC APIs](/zh-cn/grpc/)
 - [Commands(wallet cli)](/zh-cn/wallet/)
 

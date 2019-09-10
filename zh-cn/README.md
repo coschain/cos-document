@@ -5,23 +5,14 @@
 </h2>
 
 <p align="center">
-  <a href="https://travis-ci.org/coschain/contentos-go"><img alt="Travis Status" src="https://travis-ci.com/coschain/contentos-go.svg?branch=master"></a>
-</p>
-
-<p align="center">
     Contentos 是免费的，开源的，内容区块链协议。
 </p>
 
-## 介绍
-
-- [概述](/zh-cn/overview)
-- [Contentos 是什么](/zh-cn/about)
-- [测试链](/zh-cn/testnet)
 
 ## 主要内容
 
 - [教程](/zh-cn/tutorial/)
-- [插件](/zh-cn/plugin/)
+- [插件](/zh-cn/plugins/)
 - [GRPC APIs](/zh-cn/apis.md)
 
 ## 拓展内容
@@ -30,11 +21,20 @@
 
 ## 库&&工具
 
+### 源代码
+
 - [block explorer](https://github.com/coschain/block-explorer)
 - [web wallet](https://github.com/coschain/cos-web-toolkit)
 - [contract web compiler](https://github.com/coschain/WebAssemblyStudio)
+- [contract compiler](https://github.com/coschain/wasm-compiler)
 - [android sdk](https://github.com/coschain/cos-android-sdk)
 - [js sdk](https://github.com/coschain/cos-sdk-grpc-js)
+
+### 工具网站
+
+- [block explorer](http://explorer.contentos.io/)
+- [web wallet](https://testwallet.contentos.io)
+- [contract web compiler](http://studio.contentos.io)
 
 ## 资源
 
