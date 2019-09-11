@@ -390,9 +390,9 @@ func main() {
 
 ### /grpcpb.ApiService/GetBlockProducerListByVoteCount
 
-查询按投票数倒序排列的 block producer 列表
+Get block producers list ordered by reversed votecount.
 
-#### 请求
+#### Request
 
 **GetBlockProducerListByVoteCountRequest**
 
@@ -403,7 +403,7 @@ func main() {
 | last_block_producer | BlockProducerResponse |  |  |
 | limit | uint32 |  |  |
 
-#### 响应
+#### Response
 
 **GetBlockProducerListResponse**
 
@@ -411,7 +411,7 @@ func main() {
 | ----- | ---- | ----- | ----------- |
 | block_producer_list | BlockProducerResponse | repeated |  |
 
-#### 代码示例
+#### Example
 
 ```go
 func main() {
@@ -430,7 +430,7 @@ func main() {
 }
 ```
 
-#### 说明
+#### Tips
 
 1. 接口限制为 30
 
