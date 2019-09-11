@@ -432,13 +432,13 @@ func main() {
 
 #### Tips
 
-1. 接口限制为 30
+limit should be less than 30
 
 ### /grpcpb.ApiService/BroadcastTrx
 
-广播交易给 block producer 处理，唯一的写入接口
+Commit and broadcast an executable transaction to one of coschain-nodes.
 
-#### 请求
+#### Request
 
 **BroadcastTrxRequest**
 
@@ -448,7 +448,7 @@ func main() {
 | only_deliver | bool |  |  |
 | finality | bool |  |  |
 
-#### 响应
+#### Response
 
 **BroadcastTrxResponse**
 
@@ -459,11 +459,9 @@ func main() {
 | msg | string |  |  |
 | finality | bool |  |  |
 
-#### 代码示例
+#### Example
 
-注意，所有链上写入操作都是通过这个接口。这个接口的核心是请求中携带的 transaction。transaction 是 signed_transaction 类型，需要签名。
-
-**示例: 创建账户**
+**Example: create an account**
 
 ```go
 func PublicKeyFromWIF(encoded string) *prototype.PublicKeyType {
@@ -633,30 +631,34 @@ func main() {
 }
 ```
 
-上述代码会正确运行，并在链上创建一个账号，账号名: testuser1，使用公钥 COS6cPDiXW4amg3dmMMQ9fqxMVJc7dtoJjaaYetBvX72q77yGQ9u1。
-上述代码作为示例代码，没有对方法进行封装。GetTrxHash 和 Sign 方法作为 SignedTransaction 类的类方法无疑更加符合习惯。
+Execuating above snippet will create a new account on local coschain. The new account uses testuser1 as its name with pubkey COS6cPDiXW4amg3dmMMQ9fqxMVJc7dtoJjaaYetBvX72q77yGQ9u1.
+The snippet flattens execution processing to make it easy to read. In real life, the methods should be encapsulated. You can read related implement in [prototype](https://github.com/coschain/contentos-go/tree/master/prototype).
 
-#### 说明
+#### Explain
 
-由示例代码可以看出，broadcast 一个 transaction 非常复杂，并且涉及到了公私钥解析，签名等。
+As the snippet, broadcast a transaction is a hard work which is related to many aspects include how to parse a public/private key or how to signed a message etc.
 
-contentos 中最基本的操作是 Operation，包括创建账号，转账等。Transaction 包含了一个或者多个同一个人发起的 Operation，Transaction 被处理的时候，里面的 Operation 要么全部执行成功，要么全部执行失败。Transaction 的发起者对其用私钥签名之后，这个 Transaction 变成 SignedTransaction，后者在前者的基础上多了签名信息。签名生成的算法参考 Sign 函数。
+The transaction in BroadcastTrxRequest is signed_transaction type which combines a normal transaction type with a signature, and each transaction contains at least one operations. In coschain, operation is the elementary execution unit including create_account_operation, transfer_operation and account_update_operation etc.
 
-上述代码中实现了 contentos 公私钥的解析函数，即 `PublicKeyFromWIF` 和 `PrivateKeyFromWIF` 生成算法请查阅源码。和大多数区块链项目类似， contentos 使用椭圆曲线生成公私钥，参数为 secp256k1。
+All types of Operation are defined in [operation.proto](https://github.com/coschain/contentos-go/blob/master/prototype/operation.proto).
 
-contentos 不能随意创建账号，而是需要有账号的人进行创建。但是 initminer 这个账号是一定存在的，它在创世区块被自动创建。
+PubKey/PrivakeKey can be presented as string for human readable. To decode it to raw pubkey/privatekey type, you can read both `PublicKeyFromWIF` and `PrivateKeyFromWIF` functions above. Contentos' pubkey/privatekey generating algorithm is closed to others projects like btc or eth bases on ecdsa with secp256k1.
 
-AccountCreateOperaton 中需要如下：
+Detail execution processing of signature generating can read above Sign function.
 
-1. 本次创建账号费用 Fee。这部分费用会从创建者账户的 balance 中扣除，并追加进被创建账户的 vest balance 中
-2. 创建者的用户名 Creator
-3. 被创建者的用户名 NewAccountName
-4. 被创建者使用的公钥 PubKey
+You can't create account except you knew a private key belongs to other account who already have been recorded in coschain. For local environment or development environment you could use initminer as any other accounts' creator who was automaticly created in genesis block by coschain itself.
 
-被创建者应该确保公钥对应的私钥不会泄漏。
+The arguments of AccountCreateOperation
 
-contentos 通过 chainid 区分不同的链，默认的 chainid 是 main。
+1. Fee: substrct from creator's balance and add to createe's vest balance.
+2. Creator: who create the createe
+3. NewAccountName: the createe's name
+4. PubKey: the createe's public key.
 
-AccountCreateOperaton 被放入 Transaction 中，并由创建者使用自己的私钥进行签名。Transaction 需要当前链的 BlockPrefix 和 BlockNum 所以需要先查询一次链。
+Createe should keep the private key and avoid to be leaked.
 
-示例代码中 GenerateSignedTxAndValidate 实现只支持 AccountCreatorOperation ，这是为了简便和演示。更通用的代码请参考 contentos 源码中的同名函数。
+Different chainid refer to different chain, and cannot communicate with each other.
+
+Before sign the transaction contains AccountCreateOperaton, the current blockprefix and blocknum should be known, query current chain state is necessary.
+
+In sample snippet, GenerateSignedTxAndValidate function only support AccountCreatorOperation. For usual implememt, looking [GenerateSignedTxAndValidate](https://github.com/coschain/contentos-go/blob/master/cmd/wallet-cli/commands/utils/utils.go#L24).
