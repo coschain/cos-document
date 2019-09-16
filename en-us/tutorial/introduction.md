@@ -1,6 +1,6 @@
 # Introduction
 
-## What you can lean from
+## What can lean from
 
 1. How to setup local environment and run coschain in local
 2. Configuration file and terms
