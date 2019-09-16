@@ -661,4 +661,4 @@ Different chainid refer to different chain, and cannot communicate with each oth
 
 Before sign the transaction contains AccountCreateOperaton, the current blockprefix and blocknum should be known, query current chain state is necessary.
 
-In sample snippet, GenerateSignedTxAndValidate function only support AccountCreatorOperation. For usual implememt, looking [GenerateSignedTxAndValidate](https://github.com/coschain/contentos-go/blob/master/cmd/wallet-cli/commands/utils/utils.go#L24).
+In sample snippet, GenerateSignedTxAndValidate function only supports AccountCreatorOperation. For usual implement, looking [GenerateSignedTxAndValidate](https://github.com/coschain/contentos-go/blob/master/cmd/wallet-cli/commands/utils/utils.go#L24) in contento-go.
