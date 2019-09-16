@@ -12,7 +12,7 @@
 
 该配置文件分为若干节。最外层包括 `ChainId` 和 `Name`。
 
-`ChainId` 相同的节点才能互相发现并连接。如果通过 `cosd init`，默认初始化的 ChainId 是 main，可以通过 `cosd init -n` 指定 Chaind。同样 multinodetester 默认初始化的 `ChainId` 也是 `main`，如果需要指定其他属性的链，需要使用 `-c` 指定，如: `multinodetester -c dev init 4`。
+`ChainId` 相同的节点才能互相发现并连接。如果通过 `cosd init`，默认初始化的 ChainId 是 main，可以通过 `cosd init -c` 指定 Chaind。同样 multinodetester 默认初始化的 `ChainId` 也是 `main`，如果需要指定其他属性的链，需要使用 `-c` 指定，如: `multinodetester -c dev init 4`。
 
 `Name` 用来指定节点的名字，节点名字对应应该读取本地哪一份配置文件。默认的名字是 cosd，该节点会读取 `~/.coschain/cosd` 这份配置文件。
 
