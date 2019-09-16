@@ -28,14 +28,14 @@
 
 contentos 账户分为本地账户和链上账户。
 
-#### 本地账户
+### 本地账户
 
 本地账户是一份 keystore 文件，被放置在 `~/.coschain` 文件夹下。一份 keystore 存储了一对 contentos 的公私钥。keystore 文件可以被 wallet 创建或者导入。
 一份本地的 keystore 类似于:
 
 ```json
 {  
-   "Name":"runetressa",
+   "Name":"testuser",
    "PubKey":"COS745h9zeER6qea8q9GVnRVvia7dHXnbPSAKvF84SbwSdzBG5pa1",
    "Cipher":"AES-256",
    "CipherText":"Bo3DR/lPtrfau4CsgHBFR4jPE78fPUnY5xY9pO6OKhuMe5fTZ2jxPd8MJDzcqiFSf7o=",
@@ -47,7 +47,7 @@ contentos 账户分为本地账户和链上账户。
 
 Name 对应链上账户的名称，公钥公开存放，私钥加密存放。
 
-#### 链上账户
+### 链上账户
 
 如果一个账户在链上被创建成功，那么可以通过命令（见下文）查询到具体信息。链上账户包含丰富的信息，包括账户余额，抵押数量等。
 链上账户通过 wallet 创建。
