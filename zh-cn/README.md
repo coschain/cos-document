@@ -12,7 +12,7 @@
 ## 主要内容
 
 - [教程](/zh-cn/tutorial/)
-- [插件](/zh-cn/plugins/)
+- [插件](/zh-cn/plugins.md)
 - [GRPC APIs](/zh-cn/apis.md)
 
 ## 拓展内容

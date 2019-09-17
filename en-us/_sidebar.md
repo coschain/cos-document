@@ -1,7 +1,7 @@
-* 主要内容
+* Content
 
-    * [教程](/en-us/tutorial/)
-    * [插件](/en-us/plugins.md)
-    * [链 Apis](/en-us/apis.md)
+    * [Getting start](/en-us/tutorial/)
+    * [Plugins](/en-us/plugins.md)
+    * [Grpc Apis](/en-us/apis.md)
 
-* [库 && 工具](/en-us/tools.md)
+* [Libraries && Tools](/en-us/tools.md)
