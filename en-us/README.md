@@ -11,7 +11,7 @@
 ## ESSENTIALS
 
 - [Getting Started](/en-us/tutorial/)
-- [Plugins](/en-us/plugins.md/)
+- [Plugins](/en-us/plugins.md)
 - [GRPC APIs](/en-us/apis.md)
 
 ## ADVANCED GUIDE
