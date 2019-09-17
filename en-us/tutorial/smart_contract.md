@@ -186,13 +186,13 @@ COSIO_ABI(cosToken, (create)(transfer)) // specifies that the contract exposes t
 
 An online IDE is provided [here](http://studio.contentos.io/).  Just start a token project, above source code will be generated automatically for you. Press the `Build` button and the IDE will do the work for you. When it's done,  there will be a `wasm` file and a `abi` file generated.
 
-![](/Users/zhaoguojie/go/coschain/cos-document/en-us/tutorial/contract_build.jpg)
+![build](../../_media/contract_build.jpg)
 
 ## 3. deploy your contract on contentos blockchain
 
 To deploy your smart contract, just press `Deploy` button, then fill in the first 3 blanks in the following picture and hit `Confirm` button. Your contract will be deployed on our testnet.
 
-![](/Users/zhaoguojie/go/coschain/cos-document/en-us/tutorial/contract_deploy.jpg)
+![deploy](../../_media/contract_deploy.jpg)
 
 
 
@@ -227,8 +227,8 @@ Users can also visit [here](https://testwallet.contentos.io/#/create)
 
 #### 4.2.1 import key
 
-![](/Users/zhaoguojie/go/coschain/cos-document/en-us/tutorial/import_key_web_wallet.jpg)
+![import_key](../../_media/import_key_web_wallet.jpg)
 
 #### 4.2.2 invoke contract action
 
-![](/Users/zhaoguojie/go/coschain/cos-document/en-us/tutorial/action_web_wallet.jpg)
+![create](../../_media/action_web_wallet.jpg)
