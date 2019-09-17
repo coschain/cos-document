@@ -186,5 +186,95 @@ When coschain started, it would import all keystore files under `~/.coschain`, y
 
 If a unlocked account had no operation for a short while, it automatically locked itself.
 
+## Currency
 
+The Currency in coschain is called COS, VEST and STAKE are different types of COS. COS can be convert to VEST and vice verse, also COS to STAKE. But VEST has no way to convert to STAKE and vice verse.
 
+User can transfer COS to others but VEST and STAKE is immovable. VEST refers one's power in coschain and STAKE is used to acquire stamina --- each operation execuated in coschain would spent stamina.
+
+### Transfer
+
+```shell
+./wallet-cli
+> transfer initminer testuser0 1.000000
+```
+
+* Precision of COS is 6 digits
+* Sender should be different from receiver
+* Sender should be unlocked
+
+**Result**
+
+```shell
+> transfer initminer runetressa 1.000000
+Result: invoice:<status:200 net_usage:1250 cpu_usage:1 op_results:<> >
+```
+
+### Vest
+
+```shell
+./wallet-cli
+> transfer_vest initminer testuser0 1.000000
+```
+
+* It convert COS to VEST
+* Sender can be same with receiver
+* Exchange rate COS to Vest is fixed to 1
+
+**Result**
+
+```shell
+> transfer_vest initminer initminer 1.000000
+Result: invoice:<status:200 net_usage:1240 cpu_usage:1 op_results:<> >
+```
+
+### Stake
+
+Execuate any operation on coschain will spend stamina. For a user, the number of operations can be sent to coschain is determined by user's current stamina.
+
+Stamina has two sources to acquire, one is called free quota. Coschain gives each account some stamina every day so a new account can execute few operations.
+
+If free quota is not enough, user can stake to acquire it. More cos is staked, more stamina the account would get.
+
+Stamina automatically recovers, and after 1 day, it will be full.
+
+```shell
+./wallet-cli
+> stake initminer testuser0 1.000000
+```
+
+Like transfer_vest, stake allows sender and receiver same.
+
+## Content
+
+As a contento chain, user can get reward by post/reply a content or vote for it.
+
+Author would not be awarded from he/she's content unless others vote for it. The reward is determined by total votes weighted power.
+
+### Post
+
+```shell
+./wallet-cli
+> post initminer "article" "hello world" "hello world for everyone"
+```
+
+**Result**
+
+```shell
+> post initminer "article" "hello world" "hello world for everyone"
+Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
+```
+
+### Reply
+
+```shell
+./wallet-cli
+> reply
+```
+
+### Vote
+
+```shell
+./wallet-cli
+> vote
+```
