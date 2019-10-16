@@ -13,7 +13,6 @@
 
 1. MacOS
 2. Linux
-3. Amazon
 
 ## Potential Editors and IDEs
 

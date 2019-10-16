@@ -269,12 +269,18 @@ Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 
 ```shell
 ./wallet-cli
-> reply
+> reply "intminer" "content" 1571218688384377456
+Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 ```
+
+1571218688384377456 refers to a post id in coschain, also, it can be a reply id. After all, reply is a type of post.
 
 ### Vote
 
 ```shell
 ./wallet-cli
-> vote
-```
+> vote "initminer" 1571218688384377456
+Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
+``
+
+Same, 1571218688384377456 refers to a post id or a reply id.

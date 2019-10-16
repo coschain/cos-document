@@ -4,7 +4,7 @@
 
 插件是一些可选的服务，用来提供额外的数据或者功能（见下文）。它们和 cosd 主程序一同运行，需要在 cosd 启动时指定开启，默认不启动。部分服务依赖其他服务的运行。
 
-大多数插件依赖标准数据库，尤其是 [mysql](https://www.mysql.com/)，推荐版本 5.8 以上。需要修改 ~/.coschain 下相应的数据库配置使其指向自己的配置，见 config.toml 的 [Database]。
+大多数插件依赖标准数据库，尤其是 [mysql](https://www.mysql.com/)，推荐版本 5.8 以上。需要修改 ~/.coschain 下相应的数据库配置使其指向自己的配置，见 config.toml 的 `[Database]` 节。
 
 ## 目前提供的插件
 

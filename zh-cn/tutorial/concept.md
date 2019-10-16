@@ -18,8 +18,11 @@
 
 ### Consensus
 
-`BootStrap` 如果被设置为 `true`，那么如果被选为了 bp 节点，在轮到自己出块的时候，会以 `LocalBpName` 的名义，用 `LocalBpPrivateKey` 签名产出的块。
-`BootStrap` 如果被设置为 `false`，那么就只会使用同步模式。即使被选为了 bp 节点，这个节点在轮到自己出块的时候也不会出块。
+除非在本地环境，否则请设置 `BootStrap` 为 `false`。
+
+如果一个节点的 `BootStrap` 被设置为 `true` 那么它会尝试从零引导一个新的 coschain。
+
+`BootStrap` 如果被设置为 `false`，那么就会使用同步模式。同步完成后，如果被选为了 bp 节点，这个节点在轮到自己出块的时候就会出块。
 
 ### Database
 

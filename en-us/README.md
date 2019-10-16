@@ -10,6 +10,7 @@
 
 ## ESSENTIALS
 
+- [Overview](/en-us/overview.md)
 - [Getting Started](/en-us/tutorial/)
 - [Plugins](/en-us/plugins.md)
 - [GRPC APIs](/en-us/apis.md)

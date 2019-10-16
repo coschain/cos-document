@@ -276,12 +276,18 @@ Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 
 ```shell
 ./wallet-cli
-> reply
+> reply "intminer" "content" 1571218688384377456
+Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 ```
+
+其中 1571218688384377456 指代一篇链上 post 的 id，也可能是 reply 的 id，不过 reply 其实也只是一种特殊的 post。
 
 ### 投票
 
 ```shell
 ./wallet-cli
-> vote
+> vote "initminer" 1571218688384377456
+Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 ```
+
+同样，1571218688384377456 指代一篇链上 post 或者 reply 的 id。

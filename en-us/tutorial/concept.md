@@ -18,9 +18,11 @@ Nodes can discover each other only when they have same *ChainId*. The default Ch
 
 ### Consensu section
 
-If *BootStrap* were set to *true*, when it was selected to be a block producer, would sign block by *LocalBpPrivateKey* as the name *LocalBpName*.
+Only running coschain in local environment otherwise *BootStrap* should always be set to *false*.
 
-If *BootStrap* were set to *false*, the coschain would only sync blocks from others. Even it selected to be a block producer, it just skip this producing block turn.
+If set a node's *BootStrap* to *true*, it will try to bootstrap a new coschain from zero. 
+
+If *BootStrap* were set to *false*, the coschain would first sync blocks from others. If it was selected to be a block producer, it would produce block in its turn.
 
 ### Database section
 

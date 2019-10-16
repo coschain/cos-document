@@ -1,6 +1,6 @@
 # Setup local environment
 
-This tutorial begins from compiling source codes, and set up local environment step by step until the local chain can produce blocks. Considering the errors during compiling time, we also provide a [docker](). For a concrete knowledge about contentos, building from source code is alse a choice. 
+This tutorial begins from compiling source codes, and set up local environment step by step until the local chain can produce blocks. Considering the errors during compiling time, we perpared to provide a docker. But now and for a concrete knowledge about contentos, building from source code is a recommend choice. 
 
 ## Step 1: Getting source code
 
@@ -107,7 +107,7 @@ After all above finished, there would be 4 nodes running in local environment.
 
 ##### Choosing a node to produce block
 
-Even there are multi nodes running, but didn't choose a block producer, only `testcosd_0` (initminer) node would produces blocks and others just sync these produced blocks. So we need choose block producer manually. About the terms like initminer, block producer etc, read [Basic Concepts]().
+Even there are multi nodes running, but didn't choose a block producer, only `testcosd_0` (initminer) node would produces blocks and others just sync these produced blocks. So we need choose block producer manually. About the terms like initminer, block producer etc, read [Basic Concepts](/en-us/tutorial/concept.md).
 
 In general, a node who wanted to be a block producer should first registered itself to block producer then persuade others to vote to it. In local environment, we simplified it and provide `multinodetester` command in wallet-cli to register and vote.
 
@@ -125,4 +125,4 @@ Noninteractive mode is provided. Run wallet-cli directly as below.
 wallet-cli multinodetester 4
 ```
 
-And now, the coschain is running in local and can produce blocks, try to [interactive with chain](), but before that, some terms and concepts should be explained.
+And now, the coschain is running in local and can produce blocks, try to [interactive with chain](/en-us/tutorial/wallet.md), but before that, some terms and concepts should be explained.
