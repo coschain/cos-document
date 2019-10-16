@@ -15,10 +15,6 @@
 - [Plugins](/en-us/plugins.md)
 - [GRPC APIs](/en-us/apis.md)
 
-## ADVANCED GUIDE
-
-- [Sabft](/en-us/sabft.md)
-
 ## LIBRARIES & TOOLS
 
 ### LIBARARIES
@@ -41,10 +37,8 @@
 
 ## RESOURCES
 
-- [Frequence Questions](/en-us/questions.md)
 - [Whitepaper](https://www.contentos.io/subject/home/pdfs/white_paper_en.pdf)
 - [Community](https://forum.contentos.io)
-- [Contributors](/en-us/contributors.md)
 
 
 ## License

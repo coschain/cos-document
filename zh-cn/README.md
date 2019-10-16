@@ -16,10 +16,6 @@
 - [插件](/zh-cn/plugins.md)
 - [GRPC APIs](/zh-cn/apis.md)
 
-## 拓展内容
-
-- [Sabft](/zh-cn/sabft.md)
-
 ## 库 && 工具
 
 ### 源代码
@@ -40,10 +36,8 @@
 
 ## 资源
 
-- [常见问题](/zh-cn/questions/)
 - [白皮书](https://www.contentos.io/subject/home/pdfs/white_paper_zh.pdf)
 - [社区](https://forum.contentos.io)
-- [贡献者](/zh-cn/contributors)
 
 
 ## 许可证
