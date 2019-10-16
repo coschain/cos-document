@@ -281,6 +281,6 @@ Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
 ./wallet-cli
 > vote "initminer" 1571218688384377456
 Result: invoice:<status:200 net_usage:1630 cpu_usage:1 op_results:<> >
-``
+```
 
 Same, 1571218688384377456 refers to a post id or a reply id.
