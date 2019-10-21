@@ -6,7 +6,7 @@
 2. 一个简单的 hello world 合约
 3. 编译合约与 ABI 文件
 5. 部署并调用合约函数
-6. 一个代币合约
+6. 一个 token 合约
 
 ## 概念
 
@@ -18,24 +18,6 @@ Contentos 合约执行的原理和 EOS 的方式十分类似，如果有过 EOS 
 合约环境和链运行的环境无关，准确地说，是提供了一个运行合约编译器的环境。正因为如此，Contentos 提供了一个 [网站](http://studio.contentos.io/) 用作在线编译合约。这样就不用配置繁琐的本地环境。
 
 当然，如果是合约开发者，在本地安装合约环境依然是必要的。
-
-### 第一步：获取 compier 源码
-
-从 github 上获取 master 分支的代码
-
-```shell
-git clone git@github.com:coschain/wasm-compiler.git
-```
-
-### 第二步：编译
-
-#### 在 ubuntu 系统安装合约环境
-
-目前 github 上步骤过于山寨，需要讨论
-
-#### 在 macOS 系统安装合约环境
-
-缺失，要么步骤写全，要么打一个 homebrew 包
 
 ## hello world 合约
 
@@ -221,7 +203,7 @@ args 是一个列表，使用 json 格式，需要注意转义。
 Result: invoice:<status:200 op_results:<vm_console:"Hello initminer\n" > >
 ```
 
-## 一个发币合约
+## 一个 token 合约
 
 这个示例合约可以在[这里](https://github.com/coschain/wasm-compiler/blob/master/contracts/token/token.cpp) 找到。
 
