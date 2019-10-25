@@ -27,6 +27,8 @@
 - [android sdk](https://github.com/coschain/cos-android-sdk)
 - [iOS sdk](https://github.com/coschain/cos-ios-sdk)
 - [js sdk](https://github.com/coschain/cos-sdk-grpc-js)
+- [cosjs](https://github.com/coschain/cosjs)
+- [smartcontract_template_js](https://github.com/coschain/smartcontract_template_js)
 
 ### 工具网站
 
