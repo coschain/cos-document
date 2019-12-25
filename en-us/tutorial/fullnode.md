@@ -46,7 +46,7 @@ At this point, you need to modify the following in the file
 
   ...
 
-  eedList = ["3.210.182.21:20338","34.206.144.13:20338"] (Set this to the seed nodes of contentos main net)
+  SeedList = ["3.210.182.21:20338","34.206.144.13:20338"] (Set this to the seed nodes of contentos main net)
 ```
 
 ### 4.Initialize the MySQL environment
@@ -60,12 +60,7 @@ Then, execute the following instruction to initialize the various tables needed 
 
 ### 5.Run full node
 
-At this point, you can start your full node with the following instruction
-```
-./cosd start
-```
-
-when starting the node, you can specify the type of plugin you want to launch.
+At this point, you can start your full node. When starting the node, you can specify the type of plugin you want to launch.
 For more information about plugins, you can refer to this article [Plugins](https://github.com/coschain/cos-document/blob/master/en-us/plugins.md),
 different plugins correspond to different statistics.
 

@@ -43,7 +43,7 @@ go build
 
   ...
 
-  eedList = ["3.210.182.21:20338","34.206.144.13:20338"] (主网的种子节点，需要正确配置才能保证连上网络中其他节点)
+  SeedList = ["3.210.182.21:20338","34.206.144.13:20338"] (主网的种子节点，需要正确配置才能保证连上网络中其他节点)
 ```
 
 ### 4.初始化MySQL环境
@@ -57,13 +57,7 @@ go build
 
 ### 5.运行全节点
 
-至此，您可以通过如下指令启动您的全节点
-
-```
-./cosd start
-```
-
-在启动的时候，您可以指定您想要启动的插件类型。关于插件的详细信息，您可以参考这篇文章[插件](https://github.com/coschain/cos-document/blob/master/zh-cn/plugins.md)，不同的插件，对应了不同的统计信息
+至此，您可以通过如下指令启动您的全节点。在启动的时候，您可以指定您想要启动的插件类型。关于插件的详细信息，您可以参考这篇文章[插件](https://github.com/coschain/cos-document/blob/master/zh-cn/plugins.md)，不同的插件，对应了不同的统计信息
 
 例如，我要启动`trxsqlservice`、`dailystatservice`、`block_log_svc`、`block_log_proc_svc`四个插件，那么我的启动命令就是这样的
 
