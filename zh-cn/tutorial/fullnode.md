@@ -57,7 +57,7 @@ go build
 
 ### 5.运行全节点
 
-至此，您可以通过如下指令启动您的全节点。在启动的时候，您可以指定您想要启动的插件类型。关于插件的详细信息，您可以参考这篇文章[插件](https://github.com/coschain/cos-document/blob/master/zh-cn/plugins.md)，不同的插件，对应了不同的统计信息
+至此，您就可以启动您的全节点了。在启动的时候，您可以指定您想要启动的插件类型。关于插件的详细信息，您可以参考这篇文章[插件](https://github.com/coschain/cos-document/blob/master/zh-cn/plugins.md)，不同的插件，对应了不同的统计信息
 
 例如，我要启动`trxsqlservice`、`dailystatservice`、`block_log_svc`、`block_log_proc_svc`四个插件，那么我的启动命令就是这样的
 
