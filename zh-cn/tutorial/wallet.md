@@ -216,10 +216,10 @@ Result: invoice:<status:200 net_usage:1250 cpu_usage:1 op_results:<> >
 
 ```shell
 ./wallet-cli
-> transfer_vest initminer testuser0 1.000000
+> transfer_vest initminer testuser0 1.000000 'memo'
 ```
 
-这个命令把 COS 转成 VEST，sender 和 receiver 可以是同一个人，COS 和 VEST 的汇率恒定为 1。
+这个命令把 COS 转成 VEST，sender 和 receiver 可以是同一个人，COS 和 VEST 的汇率恒定为 1, Memo请根据实际情况替换。
 
 **返回**
 
