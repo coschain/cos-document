@@ -214,12 +214,13 @@ Result: invoice:<status:200 net_usage:1250 cpu_usage:1 op_results:<> >
 
 ```shell
 ./wallet-cli
-> transfer_vest initminer testuser0 1.000000
+> transfer_vest initminer testuser0 1.000000 'memo'
 ```
 
 * It convert COS to VEST
 * Sender can be same with receiver
 * Exchange rate COS to Vest is fixed to 1
+* Memo can be empty
 
 **Result**
 
